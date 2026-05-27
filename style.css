@@ -912,6 +912,24 @@
       .timeline { padding-left: 28px; }
       .timeline-item::before { left: -37px; }
       .timeline-item::after { left: -31px; }
+      .contact-grid {
+    grid-template-columns: 1fr; /* جعل القسم عمود واحد بدلاً من عمودين */
+    gap: 40px; /* تقليل المسافة بين العناصر ليناسب الموبايل */
+  }
+
+  .form-row {
+    grid-template-columns: 1fr; /* جعل الاسم الأول والاسم الثاني تحت بعض في الموبايل */
+    gap: 16px;
+  }
+  
+  .contact-item {
+    padding: 12px 16px; /* تقليل الحشو الداخلي قليلاً ليناسب الشاشات الصغيرة */
+  }
+
+  .ci-value {
+    font-size: 0.8rem; /* تصغير خط النصوص الطويلة (مثل الإيميل) لكي لا تخرج عن الكارت */
+    word-break: break-all; /* حماية إضافية تمنع الإيميل من كسر حدود الشاشة */
+  }
     }
 
     @media (max-width: 480px) {
@@ -920,3 +938,5 @@
       .stats-grid { grid-template-columns: 1fr; }
       .skills-grid { grid-template-columns: 1fr; }
     }
+
+    /* ضبط استجابة قسم الـ Contact مع الشاشات الصغيرة */
